@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .text-stroke-2 {
+        -webkit-text-stroke: 2px black;
+    }
+}
+
+@custom-variant hover (&:hover);

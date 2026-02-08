@@ -1,0 +1,5 @@
+/.gemini
+.idea
+node_modules
+.next
+.env.local
