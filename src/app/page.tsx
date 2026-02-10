@@ -158,9 +158,6 @@ export default function Page() {
               <p className="text-base md:text-lg font-sans font-light leading-relaxed mb-8 md:mb-12 text-brand/70 border-l-2 border-brand/10 pl-6 md:pl-8">
                  Statt Informationen stumpf zu kopieren, setzt Smartnotes neue Inhalte aktiv in Bezug zu deinem vorhandenen Wissen.
               </p>
-              <button className="text-[10px] font-sans font-bold uppercase tracking-widest border-b-2 border-brand pb-1 self-start hover:opacity-50 transition-all">
-                 Engine entdecken
-              </button>
            </div>
         </section>
 

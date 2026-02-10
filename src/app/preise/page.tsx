@@ -9,15 +9,15 @@ export default function PricingPage() {
 
       <main className="max-w-screen-xl mx-auto px-6 md:px-8 pt-12 pb-24 md:pb-48">
         {/* Header Section */}
-        <section className="mb-16 flex lg:flex lg:justify-between justify-center md:mb-24">
-          <div className="flex lg:justify-between justify-center w-10/12 lg:w-full lg:flex-row flex-col md:grid-cols-12 gap-8 md:gap-12">
+        <section className="mb-16 flex xl:justify-between justify-center">
+          <div className="flex sm:justify-center md:w-9/12 flex-col lg:justify-between w-10/12 lg:w-8/12 xl:w-full items-center lg:items-start sm:flex-row gap-8 md:gap-12">
             <div className="md:col-span-8">
-              <h1 className="text-5xl sm:text-7xl md:text-[10rem] font-medium leading-[0.9] md:leading-[0.8] tracking-tighter mb-8">
+              <h1 className="text-5xl lg:text-7xl lg:text-[8rem] xl:text-[10rem] font-medium leading-[0.9] md:leading-[0.8] tracking-tighter mb-8">
                 Dein <br className="hidden sm:block"/> <span className="italic">Weg.</span>
               </h1>
             </div>
-            <div className="flex lg:flex xl:justify-end lg:mt-20 justify-center">
-              <p className="text-lg md:text-xl font-sans lg:w-6/12 font-light leading-relaxed opacity-60">
+            <div className="flex lg:flex lg:justify-end lg:mt-20 justify-center">
+              <p className="text-lg md:text-xl font-sans md:w-10/12 lg:w-11/12 xl:w-7/12 font-light leading-relaxed opacity-60">
                 Wir starten gemeinsam in die Zukunft des Lernens. Wähle den Zugang, der zu dir passt.
               </p>
             </div>
@@ -26,13 +26,13 @@ export default function PricingPage() {
 
         {/* Pricing Card Section */}
         <section className="flex flex-col w-full xl:flex-row items-center justify-center lg:justify-between lg:grid-cols-12 gap-12 lg:gap-32">
-          <div className=" flex lg:flex lg:justify-end justify-center space-y-8 lg:w-9/12 w-10/12 mb-12 lg:mb-0">
+          <div className=" flex lg:flex lg:justify-end justify-center space-y-8 md:w-9/12 w-10/12 mb-12 lg:mb-0">
             <div>
               <span className="text-[10px] md:text-xs font-sans font-bold uppercase tracking-widest text-emerald-800 block mb-6 md:mb-8">Option</span>
               <h2 className="text-3xl md:text-5xl font-medium leading-tight italic mb-6 md:mb-8">
                 Mitgestalten <br className="hidden md:block"/> und Fördern.
               </h2>
-              <p className="text-base md:text-lg font-sans font-light leading-relaxed mb-8 md:mb-12 opacity-60">
+              <p className="text-base md:text-lg font-sans lg:w-11/12 font-light leading-relaxed mb-8 md:mb-12 opacity-60">
                 Egal für welchen Weg du dich entscheidest, du bist Teil der Bewegung für besseres Verständnis.
               </p>
 
@@ -48,7 +48,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 justify-center lg:flex grid lg:ml-32 md:grid-cols-2 w-9/12 md:w-auto gap-6">
+          <div className="lg:col-span-8 justify-center md:w-2/3 lg:w-1/2 md:flex grid md:grid-cols-2 w-9/12 gap-6">
             {/* Option 1: Closed Beta (Free) */}
             <div className="bg-emerald-900 text-white p-8 md:p-10 shadow-2xl relative overflow-hidden flex flex-col justify-between min-h-[450px] md:min-h-[500px] border border-emerald-800 group">
                <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500 rounded-full blur-[100px] opacity-20 -mr-32 -mt-32"></div>
