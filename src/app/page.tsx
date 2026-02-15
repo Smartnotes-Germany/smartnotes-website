@@ -137,7 +137,7 @@ export default function Page() {
                  <div className="xl:col-span-7 relative group">
                     <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-brand/5 overflow-hidden">
                        <Image 
-                          src={"/Mockup-Images/mockup-upload.png"} 
+                          src={"/mockup-images/mockup-upload.png"}
                           alt={"Upload Interface"} 
                           width={1300} 
                           height={1300} 
@@ -152,7 +152,7 @@ export default function Page() {
                  <div className="order-2 xl:order-1 xl:col-span-7 relative">
                     <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-brand/5 overflow-hidden">
                        <Image 
-                          src={"/Mockup-Images/mockup-training.png"} 
+                          src={"/mockup-images/mockup-training.png"}
                           alt={"Training Interface"} 
                           width={1300} 
                           height={1300} 
