@@ -185,7 +185,7 @@ export default function Page() {
                  <div className="xl:col-span-7 relative">
                     <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-brand/5 overflow-hidden">
                        <Image 
-                          src={"/Mockup-Images/mockup-ergebnis.png"} 
+                          src={"/mockup-images/mockup-ergebnis.png"}
                           alt={"Wissensnetz"} 
                           width={1400}
                           height={1400}
