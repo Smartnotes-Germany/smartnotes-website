@@ -23,9 +23,9 @@ export const Footer = () => {
                         <div className="space-y-6">
                             <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] opacity-30">Plattform</h4>
                             <ul className="space-y-4 text-xs md:text-sm font-sans font-medium uppercase tracking-widest">
-                                <li><a href="/#analyse" className="hover:text-emerald-400 transition-colors">Analyse</a></li>
-                                <li><a href="/#verstehen" className="hover:text-emerald-400 transition-colors">Semantik</a></li>
-                                <li><a href="/#ueben" className="hover:text-emerald-400 transition-colors">Training</a></li>
+                                <li><a href="/public#analyse" className="hover:text-emerald-400 transition-colors">Analyse</a></li>
+                                <li><a href="/public#verstehen" className="hover:text-emerald-400 transition-colors">Semantik</a></li>
+                                <li><a href="/public#ueben" className="hover:text-emerald-400 transition-colors">Training</a></li>
                                 <li><span className="opacity-20">App Beta</span></li>
                             </ul>
                         </div>

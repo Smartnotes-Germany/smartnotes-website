@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 /**
  * Navbar component with responsive mobile menu and styled CTA button.
@@ -11,16 +12,23 @@ export const Navbar = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     const links = [
-        { href: "/#analyse", label: "Analyse" },
-        { href: "/#verstehen", label: "Das System" },
-        { href: "/#ueben", label: "Training" },
+        { href: "/#problem", label: "Problem" },
+        { href: "/#produkt", label: "Produkt" },
+        { href: "/#vorteile", label: "Vorteile" },
         { href: "/preise", label: "Preise" },
     ];
 
     return (
         <nav className="border-b border-brand/10 bg-[#F5F5F0]/80 backdrop-blur-md sticky top-0 z-50">
             <div className="max-w-screen-xl mx-auto px-6 md:px-8 h-20 flex justify-between items-center">
-                <div className="text-xs md:text-sm font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase">
+                <div className="flex items-center gap-3 text-xs md:text-sm font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase hover:opacity-80 transition-opacity">
+                    <Image 
+                        src="/logo.png" 
+                        alt="Smartnotes Logo" 
+                        width={32} 
+                        height={32} 
+                        className="object-contain rounded-md"
+                    />
                     Smartnotes
                 </div>
                 
@@ -35,8 +43,8 @@ export const Navbar = () => {
 
                 <div className="flex items-center gap-6">
                     <a 
-                        href="/#warteliste" 
-                        className="hidden bg-black sm:inline-block text-[10px] font-bold uppercase tracking-widest bg-brand text-white px-6 py-3 rounded-full hover:scale-105 transition-all shadow-md active:scale-95 font-sans"
+                        href="#warteliste"
+                        className="hidden bg-black sm:inline-block text-[10px] font-bold uppercase tracking-widest text-white px-6 py-3 rounded-full hover:scale-105 transition-all shadow-md active:scale-95 font-sans"
                     >
                         Smartnotes Anmeldung
                     </a>
@@ -81,7 +89,7 @@ export const Navbar = () => {
                         </a>
                     ))}
                     <a 
-                        href="/#warteliste" 
+                        href="/public#warteliste"
                         className="sm:hidden text-[10px] font-bold uppercase tracking-widest bg-brand text-white bg-black px-6 py-3 rounded-full self-start shadow-md"
                         onClick={() => setIsOpen(false)}
                     >

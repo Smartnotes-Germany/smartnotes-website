@@ -1,10 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import {ConvexWrapper} from "./ConvexWrapper";
+import {ConvexWrapper} from "./components/ConvexWrapper";
+import {Navbar} from "./components/navbar";
+import {Footer} from "./components/footer";
 
 export const metadata: Metadata = {
   title: 'Smartnotes',
   description: 'Learn efficient and fast',
+  icons: "/logo.png"
 }
 
 export default function RootLayout({
@@ -14,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    <body><ConvexWrapper>{children}</ConvexWrapper></body>
+    <body>
+    <ConvexWrapper>
+      <Navbar/>
+      {children}
+      <Footer/>
+    </ConvexWrapper></body>
     </html>
   )
 }
