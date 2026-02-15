@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        brand: '#00092F',
+        accent: "hsl(var(--color-accent))"
       },
       animation: {
         blob: "blob 7s infinite",
