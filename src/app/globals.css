@@ -2,6 +2,7 @@
 
 @theme {
     --color-accent: #0b617e;
+    --color-brand: #000000;
 }
 
 @layer utilities {

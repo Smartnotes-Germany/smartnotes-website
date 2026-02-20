@@ -26,7 +26,7 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5F0] text-brand font-serif selection:bg-brand selection:text-white">
+    <div className="min-h-screen bg-[#F5F5F0] text-brand font-serif selection:bg-accent selection:text-white">
       <main className="max-w-screen-xl mx-auto px-6 md:px-8 pt-12 md:pt-24">
         
         {/* Editorial Hero */}
@@ -110,7 +110,7 @@ export default function Page() {
         </section>
 
         {/* MVP Product Showcase: The 3 Steps */}
-        <section id="produkt" className="mb-24 md:mb-48 border-t border-brand/10 pt-24">
+        <section id="produkt" className="mb-24 md:mb-48 border-t border-black/10 pt-24">
            <div className="text-center mb-16 md:mb-32">
               <span className="text-[10px] md:text-xs font-sans font-bold uppercase tracking-[0.4em] text-accent block mb-4">Das Produkt</span>
               <h2 className="text-4xl md:text-7xl font-medium italic text-brand">In drei Schritten zur <br/> <span className="not-italic">Bestnote.</span></h2>
@@ -137,7 +137,7 @@ export default function Page() {
                     </ul>
                  </div>
                  <div className="xl:col-span-7 relative group">
-                    <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-brand/5 overflow-hidden">
+                    <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-black/20 overflow-hidden">
                        <Image 
                           src={"/mockup-images/mockup-upload.png"}
                           alt={"Upload Interface"} 
@@ -152,7 +152,7 @@ export default function Page() {
               {/* Step 2: Verstehen prüfen */}
               <div className="grid xl:grid-cols-12 gap-8 xl:gap-24 items-center">
                  <div className="order-2 xl:order-1 xl:col-span-7 relative">
-                    <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-brand/5 overflow-hidden">
+                    <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-black/20 overflow-hidden">
                        <Image 
                           src={"/mockup-images/mockup-training.png"}
                           alt={"Training Interface"} 
@@ -185,7 +185,7 @@ export default function Page() {
                     </div>
                  </div>
                  <div className="xl:col-span-7 relative">
-                    <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-brand/5 overflow-hidden">
+                    <div className="rounded-lg md:rounded-[1rem] hover:scale-[1.02] transition-transform shadow-2xl border border-brand/20 overflow-hidden">
                        <Image 
                           src={"/mockup-images/mockup-ergebnis.png"}
                           alt={"Wissensnetz"} 
@@ -379,7 +379,7 @@ export default function Page() {
                  disabled={!ageChecked || !productInfosChecked}
                  className="bg-black rounded-full text-white font-sans px-10 md:px-12 py-4 text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] hover:opacity-90 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-brand/10 disabled:opacity-30 disabled:scale-100 disabled:cursor-not-allowed"
                >
-                 Pro-Platz Sichern
+                  Anmelden
                </button>
              </form>
            ) : (
