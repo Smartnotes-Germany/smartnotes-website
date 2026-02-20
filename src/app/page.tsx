@@ -8,7 +8,8 @@ import Image from "next/image";
 export default function Page() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const [ageChecked, setAgeChecked] = useState(false);
+   const [productInfosChecked, setProductInfosChecked] = useState(false);
 
    const addUser = useMutation(api.addUser.createUser);
 
@@ -334,17 +335,36 @@ export default function Page() {
                </div>
 
                <div className="flex flex-col gap-6 text-left w-full max-w-md mx-auto">
-                 <label className="flex items-start gap-4 cursor-pointer group/label">
+                  <label className="flex items-start gap-4 cursor-pointer group/label">
+                     <div className="relative mt-1">
+                        <input
+                            type="checkbox"
+                            checked={ageChecked}
+                            onChange={(e) => setAgeChecked(e.target.checked)}
+                            required
+                            className="absolute opacity-0 w-5 h-5 cursor-pointer z-10 peer"
+                        />
+                        <div className="w-5 h-5 border-2 border-brand/20 rounded-sm peer-checked:bg-brand peer-checked:border-brand transition-all duration-200"></div>
+                        <svg className="absolute top-1 left-1 w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                           <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                     </div>
+                     <span className="text-sm md:text-base font-sans font-light text-brand/70 leading-relaxed group-hover/label:text-brand transition-colors select-none">
+                        Ich bestätige, dass ich mindestens 16 Jahre alt bin.
+                     </span>
+                  </label>
+                 <label className={`flex items-start gap-4 cursor-pointer group/label transition-opacity ${!ageChecked ? 'opacity-50 cursor-not-allowed' : 'opacity-100'}`}>
                    <div className="relative mt-1">
                      <input
                        type="checkbox"
-                       checked={checked}
-                       onChange={(e) => setChecked(e.target.checked)}
+                       checked={productInfosChecked}
+                       onChange={(e) => setProductInfosChecked(e.target.checked)}
+                       disabled={!ageChecked}
                        required
-                       className="absolute opacity-0 w-5 h-5 cursor-pointer z-10"
+                       className={`absolute opacity-0 w-5 h-5 z-10 peer ${!ageChecked ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                      />
                      <div className="w-5 h-5 border-2 border-brand/20 rounded-sm peer-checked:bg-brand peer-checked:border-brand transition-all duration-200"></div>
-                     <svg className="absolute top-1 left-1 w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                     <svg className="absolute top-1 left-1 w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                      </svg>
                    </div>
@@ -352,15 +372,12 @@ export default function Page() {
                      Ja, ich möchte Updates zum Smartnotes-Launch und Produktinformationen per E-Mail erhalten.
                    </span>
                  </label>
-
-                 <p className="text-[10px] md:text-xs font-sans font-medium uppercase tracking-[0.1em] text-brand/40 leading-relaxed">
-                   Weitere Infos in der <a href="/datenschutz" className="underline hover:text-brand transition-colors">Datenschutzerklärung</a>.
-                 </p>
                </div>
 
                <button 
                  type="submit"
-                 className="bg-black rounded-full text-white font-sans px-10 md:px-12 py-4 text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] hover:opacity-90 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-brand/10"
+                 disabled={!ageChecked || !productInfosChecked}
+                 className="bg-black rounded-full text-white font-sans px-10 md:px-12 py-4 text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] hover:opacity-90 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-brand/10 disabled:opacity-30 disabled:scale-100 disabled:cursor-not-allowed"
                >
                  Pro-Platz Sichern
                </button>
