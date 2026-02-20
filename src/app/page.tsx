@@ -8,8 +8,9 @@ import Image from "next/image";
 export default function Page() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [checked, setChecked] = useState(false);
 
-  const addUser = useMutation(api.addUser.createUser);
+   const addUser = useMutation(api.addUser.createUser);
 
   const handleSubmit = (e: React.FormEvent) => {
      /** Prevents for reloading the page */
@@ -310,7 +311,7 @@ export default function Page() {
          </section>
 
         {/* Waitlist Section */}
-        <section id="warteliste" className="pb-24 md:pb-48 text-center border-t border-brand/10 pt-24 md:pt-48 max-w-4xl mx-auto px-6">
+        <section id="warteliste" className="scroll-mt-20 pb-24 md:pb-48 text-center border-t border-brand/10 pt-24 md:pt-48 max-w-4xl mx-auto px-6">
            <span className="text-[10px] font-sans font-bold uppercase tracking-[0.4em] text-brand block mb-8">Exklusiver Zugang</span>
            <h2 className="text-4xl md:text-7xl font-medium tracking-tighter italic mb-8 text-brand">Die Warteliste.</h2>
            <p className="font-sans text-base md:text-lg font-light mb-12 md:mb-16 opacity-60 max-w-2xl mx-auto text-brand">
@@ -331,6 +332,32 @@ export default function Page() {
                  />
                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-brand group-focus-within:w-full transition-all duration-500"></div>
                </div>
+
+               <div className="flex flex-col gap-6 text-left w-full max-w-md mx-auto">
+                 <label className="flex items-start gap-4 cursor-pointer group/label">
+                   <div className="relative mt-1">
+                     <input
+                       type="checkbox"
+                       checked={checked}
+                       onChange={(e) => setChecked(e.target.checked)}
+                       required
+                       className="absolute opacity-0 w-5 h-5 cursor-pointer z-10"
+                     />
+                     <div className="w-5 h-5 border-2 border-brand/20 rounded-sm peer-checked:bg-brand peer-checked:border-brand transition-all duration-200"></div>
+                     <svg className="absolute top-1 left-1 w-3 h-3 text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                       <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                     </svg>
+                   </div>
+                   <span className="text-sm md:text-base font-sans font-light text-brand/70 leading-relaxed group-hover/label:text-brand transition-colors select-none">
+                     Ja, ich möchte Updates zum Smartnotes-Launch und Produktinformationen per E-Mail erhalten.
+                   </span>
+                 </label>
+
+                 <p className="text-[10px] md:text-xs font-sans font-medium uppercase tracking-[0.1em] text-brand/40 leading-relaxed">
+                   Weitere Infos in der <a href="/datenschutz" className="underline hover:text-brand transition-colors">Datenschutzerklärung</a>.
+                 </p>
+               </div>
+
                <button 
                  type="submit"
                  className="bg-black rounded-full text-white font-sans px-10 md:px-12 py-4 text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] hover:opacity-90 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-brand/10"
@@ -339,9 +366,17 @@ export default function Page() {
                </button>
              </form>
            ) : (
-             <div className="bg-brand/5 border border-brand/10 p-8 md:p-12 rounded-sm animate-fade-in max-w-2xl mx-auto text-center">
-               <p className="font-sans font-bold text-brand uppercase tracking-[0.2em] text-base mb-4 font-sans">Erfolgreich.</p>
-               <p className="font-sans text-brand/70 text-base md:text-lg font-sans">Du stehst nun auf der Warteliste.</p>
+             <div className="animate-fade-in max-w-2xl mx-auto text-center py-8 md:py-12 px-4">
+               <div className="w-16 h-16 md:w-20 md:h-20 bg-brand text-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-brand/20">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="md:w-10 md:h-10">
+                   <polyline points="20 6 9 17 4 12"></polyline>
+                 </svg>
+               </div>
+               <h3 className="text-3xl md:text-5xl font-medium tracking-tighter italic mb-4 text-brand">Vielen Dank.</h3>
+               <p className="font-sans text-brand/60 text-lg md:text-xl font-light leading-relaxed">
+                 Du stehst nun auf der Warteliste. <br className="hidden md:block" />
+                 Wir melden uns bei dir, sobald ein Platz für dich bereitsteht.
+               </p>
              </div>
            )}
         </section>

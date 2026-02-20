@@ -43,7 +43,7 @@ export const Navbar = () => {
 
                 <div className="flex items-center gap-6">
                     <a 
-                        href="#warteliste"
+                        href="/#warteliste"
                         className="hidden bg-black sm:inline-block text-[10px] font-bold uppercase tracking-widest text-white px-6 py-3 rounded-full hover:scale-105 transition-all shadow-md active:scale-95 font-sans"
                     >
                         Smartnotes Anmeldung
@@ -89,7 +89,7 @@ export const Navbar = () => {
                         </a>
                     ))}
                     <a 
-                        href="/public#warteliste"
+                        href="/#warteliste"
                         className="sm:hidden text-[10px] font-bold uppercase tracking-widest bg-brand text-white bg-black px-6 py-3 rounded-full self-start shadow-md"
                         onClick={() => setIsOpen(false)}
                     >

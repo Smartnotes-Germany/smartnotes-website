@@ -41,7 +41,7 @@ export const Footer = () => {
                             <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] opacity-30">Rechtliches</h4>
                             <ul className="space-y-4 text-xs md:text-sm font-sans font-medium uppercase tracking-widest">
                                 <li><a href="/impressum" className="hover:text-emerald-400 transition-colors">Impressum</a></li>
-                                <li><a href="#" className="hover:text-emerald-400 transition-colors">Datenschutz</a></li>
+                                <li><a href="/datenschutz" className="hover:text-emerald-400 transition-colors">Datenschutz</a></li>
                                 <li><a href="#" className="hover:text-emerald-400 transition-colors">AGB</a></li>
                             </ul>
                         </div>
