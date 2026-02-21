@@ -172,7 +172,6 @@ export default function Page() {
                     <p className="text-base lg:text-xl font-sans font-light leading-relaxed opacity-70 mb-6 lg:mb-8">
                        Lerne aktiv statt nur zu lesen: Unsere Übungen decken genau die Bereiche ab, die für deine Prüfung wichtig sind.
                     </p>
-                    <a href="#warteliste" className="inline-block bg-brand text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-[10px] font-bold uppercase tracking-widest hover:scale-105 transition-all">Test starten</a>
                  </div>
               </div>
 
