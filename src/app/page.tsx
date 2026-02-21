@@ -121,9 +121,9 @@ export default function Page() {
               <div className="grid xl:grid-cols-12 gap-8 xl:gap-24 items-center">
                  <div className="xl:col-span-5">
                     <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-black block mb-4 xl:mb-6">Schritt 1 — Upload</span>
-                    <h3 className="text-2xl xl:text-5xl font-medium mb-6 xl:mb-8 italic text-brand">Laptop-Notizen hochladen.</h3>
+                    <h3 className="text-2xl xl:text-5xl font-medium mb-6 xl:mb-8 italic text-brand">Notizen hochladen.</h3>
                     <p className="text-base xl:text-xl font-sans font-light leading-relaxed opacity-70 mb-6 xl:mb-8">
-                       Digital-First für maximale Präzision. Lade deine digitalen Mitschriften, PDFs oder Vorlesungsfolien direkt hoch. Keine Scan-Fehler, kein Qualitätsverlust – nur reines Wissen.
+                       Volle Flexibilität für deine Notizen. Wir unterstützen jetzt alle Formate – egal ob digitale PDFs, Vorlesungsfolien oder handschriftliche Notizen via Foto. Ob GoodNotes, JPEG oder PDF: Lade dein Wissen einfach hoch.
                     </p>
                     <ul className="space-y-3 xl:space-y-4 font-sans text-[10px] md:text-xs uppercase tracking-widest opacity-50">
                        <li className="flex items-center gap-3">
@@ -132,7 +132,11 @@ export default function Page() {
                        </li>
                        <li className="flex items-center gap-3">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                          Digitale Mitschriften (Notion, Word & Co.)
+                          Digitale Mitschriften (Word, Goodnotes & Co)
+                       </li>
+                       <li className="flex items-center gap-3">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          Handschrift & Fotos (JPEG, PNG)
                        </li>
                     </ul>
                  </div>
@@ -344,7 +348,7 @@ export default function Page() {
                             required
                             className="absolute opacity-0 w-5 h-5 cursor-pointer z-10 peer"
                         />
-                        <div className="w-5 h-5 border-2 border-brand/20 rounded-sm peer-checked:bg-brand peer-checked:border-brand transition-all duration-200"></div>
+                        <div className="w-5 h-5 border-2 border-brand/20 rounded-sm transition-all duration-200"></div>
                         <svg className="absolute top-1 left-1 w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                            <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
@@ -363,7 +367,7 @@ export default function Page() {
                        required
                        className={`absolute opacity-0 w-5 h-5 z-10 peer ${!ageChecked ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                      />
-                     <div className="w-5 h-5 border-2 border-brand/20 rounded-sm peer-checked:bg-brand peer-checked:border-brand transition-all duration-200"></div>
+                     <div className="w-5 h-5 border-2 border-brand/20 rounded-sm  transition-all duration-200"></div>
                      <svg className="absolute top-1 left-1 w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                      </svg>
