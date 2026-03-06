@@ -57,7 +57,7 @@ export default function Page() {
                  {[
                     {
                        title: "Die Angst, was zu übersehen",
-                       desc: "Du liest alles dreimal, weil du nicht weißt, was wirklich zählt. Am Ende hast du viel Zeit verloren, aber keine Sicherheit gewonnen.",
+                       desc: "Du liest alles dreimal, weil du nicht weißt, what wirklich zählt. Am Ende hast du viel Zeit verloren, aber keine Sicherheit gewonnen.",
                     },
                     {
                        title: "Das Gefühl, nie fertig zu sein",
@@ -235,22 +235,22 @@ export default function Page() {
          <section id="vorteile" className="mb-24 md:mb-48 overflow-hidden">
             <div className="max-w-4xl mb-16 md:mb-24">
                <span className="text-[10px] md:text-xs font-sans font-bold uppercase tracking-widest text-brand block mb-8 md:mb-12">03 — Dein Alltag</span>
-               <h2 className="text-4xl md:text-7xl font-medium leading-[0.9] italic text-brand">Endlich wieder <br/> <span className="not-italic">durchatmen.</span></h2>
+               <h2 className="text-4xl md:text-7xl font-medium leading-[0.9] italic text-brand">Vom Stress zur <br/> <span className="not-italic">Sicherheit.</span></h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-px bg-brand/10 border border-brand/10">
                {/* Column 1: Conventional */}
                <div className="bg-[#F5F5F0] p-8 md:p-12 flex flex-col justify-between">
                   <div>
-                     <h4 className="font-sans font-bold text-[10px] opacity-70 uppercase tracking-[0.3em] mb-12">Ohne Smartnotes</h4>
+                     <h4 className="font-sans font-bold text-[10px] opacity-70 uppercase tracking-[0.3em] mb-12">Passives Lernen</h4>
                      <ul className="space-y-6 font-sans text-sm opacity-70">
                         {[
-                           { label: "Viel Aufwand, wenig Sicherheit", check: true },
-                           { label: "Schlechtes Gewissen beim Netflixen", check: true },
-                           { label: "Angst vor dem 'Blackout'", check: true },
+                           { label: "Absolute Klarheit über den Stoff", check: false },
                            { label: "Wissen, wann man fertig ist", check: false },
-                           { label: "Echte Freizeit ohne Uni-Gedanken", check: false },
-                           { label: "Sicher die Bestnote holen", check: false }
+                           { label: "Freizeit ohne schlechtes Gewissen", check: false },
+                           { label: "Gezielte Analyse der Wissenslücken", check: false },
+                           { label: "Ruhiger Schlaf vor dem Test", check: false },
+                           { label: "Mit Sicherheit zur Bestnote", check: false }
                         ].map((item, i) => (
                            <li key={i} className="flex justify-between items-center border-b border-brand/5 pb-3">
                               {item.label}
@@ -268,7 +268,7 @@ export default function Page() {
                         ))}
                      </ul>
                   </div>
-                  <p className="mt-12 text-xs italic opacity-70 font-sans">Du arbeitest hart, aber die Ungewissheit bleibt.</p>
+                  <p className="mt-12 text-xs italic opacity-70 font-sans">Viel Aufwand, aber die Sicherheit fehlt.</p>
                </div>
 
                {/* Column 2: AI Tools */}
@@ -277,12 +277,12 @@ export default function Page() {
                      <h4 className="font-sans font-bold opacity-70 text-[10px] uppercase tracking-[0.3em] mb-12">Normale KI-Tools</h4>
                      <ul className="space-y-6 font-sans text-sm opacity-70">
                         {[
-                           { label: "Viel Aufwand, wenig Sicherheit", check: true },
-                           { label: "Schlechtes Gewissen beim Netflixen", check: true },
-                           { label: "Angst vor dem 'Blackout'", check: true },
+                           { label: "Absolute Klarheit über den Stoff", check: false },
                            { label: "Wissen, wann man fertig ist", check: false },
-                           { label: "Echte Freizeit ohne Uni-Gedanken", check: false },
-                           { label: "Sicher die Bestnote holen", check: false }
+                           { label: "Freizeit ohne schlechtes Gewissen", check: false },
+                           { label: "Gezielte Analyse der Wissenslücken", check: false },
+                           { label: "Ruhiger Schlaf vor dem Test", check: false },
+                           { label: "Mit Sicherheit zur Bestnote", check: false }
                         ].map((item, i) => (
                            <li key={i} className="flex justify-between items-center border-b border-brand/5 pb-3">
                               {item.label}
@@ -311,17 +311,17 @@ export default function Page() {
                      <h4 className="font-sans font-bold text-[10px] uppercase tracking-[0.3em] mb-12 text-white">Smartnotes Leben</h4>
                      <ul className="space-y-6 font-sans text-sm">
                         {[
-                           { label: "Viel Aufwand, wenig Sicherheit", check: true },
-                           { label: "Schlechtes Gewissen beim Netflixen", check: true },
-                           { label: "Angst vor dem 'Blackout'", check: true },
+                           { label: "Absolute Klarheit über den Stoff", check: true },
                            { label: "Wissen, wann man fertig ist", check: true },
-                           { label: "Echte Freizeit ohne Uni-Gedanken", check: true },
-                           { label: "Sicher die Bestnote holen", check: true }
+                           { label: "Freizeit ohne schlechtes Gewissen", check: true },
+                           { label: "Gezielte Analyse der Wissenslücken", check: true },
+                           { label: "Ruhiger Schlaf vor dem Test", check: true },
+                           { label: "Mit Sicherheit zur Bestnote", check: true }
                         ].map((item, i) => (
                            <li key={i} className="flex justify-between items-center border-b border-white/10 pb-3">
                               {item.label}
                               {item.check ? (
-                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                  </svg>
                               ) : (
@@ -336,7 +336,7 @@ export default function Page() {
                   </div>
 
                   <div className="relative z-10 mt-12">
-                     <p className="text-xs italic text-white/60 mb-6 font-sans">Endlich die Kontrolle über deinen Erfolg zurückgewinnen.</p>
+                     <p className="text-xs italic text-white/60 mb-6 font-sans">Wir geben dir die Kontrolle über deinen Erfolg zurück.</p>
                      <a href="#warteliste" className="inline-block text-[10px] font-bold uppercase tracking-[0.2em] border-b border-blue-300 pb-1 text-white hover:text-white hover:border-white transition-colors font-sans">Warteliste beitreten</a>
                   </div>
                </div>
