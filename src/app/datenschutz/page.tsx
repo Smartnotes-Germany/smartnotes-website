@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
                         <p className="text-lg">
                             Bernd Rössner<br />
                             Teupitzer Straße 14<br />
-                            15755 Tornow<br />
+                            15755 Teupitz ST Tornow<br />
                             E-Mail: info@smartnotes.tech
                         </p>
                     </div>

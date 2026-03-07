@@ -19,7 +19,7 @@ export default function ImpressumPage() {
                             Smartnotes<br />
                             Bernd Rössner<br />
                             Teupitzer Straße 14<br />
-                            15755 Tornow
+                            15755 Teupitz ST Tornow
                         </p>
                     </div>
 
